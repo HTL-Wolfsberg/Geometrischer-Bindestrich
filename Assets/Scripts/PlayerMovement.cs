@@ -11,14 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public GameOverPanel gamO;
 
     public bool isGrounded;
-    Rigidbody rb;
+    Rigidbody2D rb;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
-    void OnCollisionStay()
+    void OnCollisionStay2D()
     {
         isGrounded = true;
     }
@@ -29,12 +29,11 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            rb.AddForce(jump * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {

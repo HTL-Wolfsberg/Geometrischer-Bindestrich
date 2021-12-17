@@ -1,18 +1,31 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class Events : MonoBehaviour
+public class Event : MonoBehaviour
 {
     // Start is called before the first frame update
-   public void NeustartGame()
+    public void Startknopf()
     {
         SceneManager.LoadScene("Level1");
-        
+
     }
 
-    public void SchlieﬂenGame()
+    public void SchlieﬂenButton()
     {
-        SceneManager.LoadScene("StartScreen");
+        UnityEditor.EditorApplication.isPlaying = false;
     }
-   
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
