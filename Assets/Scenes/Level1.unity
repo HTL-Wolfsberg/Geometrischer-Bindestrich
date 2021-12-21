@@ -292,8 +292,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283527399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35, y: 2.12, z: 0}
-  m_LocalScale: {x: 1.4840125, y: 1.3739864, z: 1}
+  m_LocalPosition: {x: 3.3394, y: 2.1324, z: 0}
+  m_LocalScale: {x: 1.5052339, y: 1.3987181, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -595,7 +595,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.818739
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   jump: {x: 0, y: 0, z: 0}
   speed: 3
   jumpForce: 2
-  gamO: {fileID: 785000528}
+  gamO: {fileID: 643347691}
   isGrounded: 0
 --- !u!114 &785000527
 MonoBehaviour:
