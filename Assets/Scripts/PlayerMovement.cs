@@ -18,9 +18,22 @@ public class PlayerMovement : MonoBehaviour
         jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
-    void OnCollisionStay2D()
+    void OnCollisionStay2D(Collision2D collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.tag == "Ground")
+        {
+ isGrounded = true;
+        }
+       
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+
     }
 
     void Update()
@@ -33,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")

@@ -21,7 +21,6 @@ public class GameOverPanel : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOverPanel.SetActive(true);
-            
         }
     }
 }
